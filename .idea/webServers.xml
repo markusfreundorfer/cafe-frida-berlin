@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="28cdcede-5a79-4fec-a618-78d6955408b3" name="Cafe Frida" url="http://ftp.strato.com">
+        <fileTransfer host="ftp.strato.com" port="21" password="dfccdfd8dfc3dfcedfcbdf9bdf98df99" username="ftp_frida@wurzlsepp.de">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

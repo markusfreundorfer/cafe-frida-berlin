@@ -1,3 +1,5 @@
+/.idea
+/node_modules
 /cafe-frida-berlin.iml
 # Windows image file caches
 Thumbs.db
