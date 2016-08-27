@@ -18,8 +18,12 @@ module.exports = function(grunt) {
                 options: {
                     replacements: [{
                         pattern: /\"[^\s]+[.]css\"/,
-                        replacement: '"css/styles<%= pkg.version %>.css"'
-                    }]
+                        replacement: '"assets/compiled/styles<%= pkg.version %>.css"'
+                    },
+                        {
+                            pattern: /\"[^\s]+[.]js\"/,
+                            replacement: '"assets/compiled/magic<%= pkg.version %>.min.js"'
+                        }]
                 }
             }
         },
@@ -30,7 +34,7 @@ module.exports = function(grunt) {
                     noCache: true
                 },
                 files: {
-                    'assets/compiled/style<%= pkg.version %>.css': 'assets/scss/styles.scss'
+                    'assets/compiled/styles<%= pkg.version %>.css': 'assets/scss/styles.scss'
                 }
             }
         },
@@ -39,8 +43,8 @@ module.exports = function(grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'src/<%= pkg.name %>.js',
-                dest: 'build/<%= pkg.name %>.min.js'
+                src: 'assets/js/magic.js',
+                dest: 'assets/compiled/magic<%= pkg.version %>.min.js'
             }
         },
         watch: {
@@ -52,7 +56,7 @@ module.exports = function(grunt) {
                 files: ['assets/compiled/*.css']
             }
         },
-        clean: ["assets/compiled/*.css", "assets/compiled/*.css.map"]
+        clean: ["assets/compiled/*.css", "assets/compiled/*.css.map", "assets/compiled/*.js"]
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -63,5 +67,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-string-replace');
 
     grunt.registerTask('local', ['watch']);
-    grunt.registerTask('deploy', ['clean','bumpup', 'sass', 'string-replace']);
+    grunt.registerTask('deploy', ['clean','bumpup', 'uglify', 'sass', 'string-replace']);
 };
