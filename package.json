@@ -1,6 +1,6 @@
 {
   "name": "cafe-frida-berlin",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "description": "responsive web page for cafe frida berlin, kreuzberg",
   "main": "\t\t",
   "scripts": {
@@ -28,6 +28,7 @@
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-git": "^1.0.0",
     "grunt-sass": "^1.2.1",
     "grunt-string-replace": "^1.3.0"
   }

@@ -47,6 +47,16 @@ module.exports = function(grunt) {
                 dest: 'assets/compiled/magic<%= pkg.version %>.min.js'
             }
         },
+        gitadd: {
+            task: {
+                options: {
+                    force: true
+                },
+                files: {
+                    src: ['assets/compiled/*']
+                }
+            }
+        },
         watch: {
             css: {
                 files: ['**/*.scss'],
@@ -65,7 +75,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bumpup');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-string-replace');
+    grunt.loadNpmTasks('grunt-git');
 
     grunt.registerTask('local', ['watch']);
-    grunt.registerTask('deploy', ['clean','bumpup', 'uglify', 'sass', 'string-replace']);
+    grunt.registerTask('deploy', ['clean','bumpup', 'uglify', 'sass', 'string-replace', 'gitadd']);
 };
