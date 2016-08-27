@@ -1,4 +1,12 @@
-h1{
-  font-family: Arial;
-  color: yellow;
+@import "colors";
+@import "css-reset";
+@import "mixins";
+@import "keyframe";
+@import "nav";
+
+body {
+  background-color: $cyan;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "helvetica";
 }

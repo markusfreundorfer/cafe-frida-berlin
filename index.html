@@ -7,10 +7,28 @@
     <link rel="stylesheet" href="assets/compiled/styles1.0.11.css">
 </head>
 <body>
-<div>
-    <h1>test</h1>
-</div>
+<input type="checkbox" id="nav">
+<label class="hamburger" for="nav">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
+<nav role="navigation">
+    <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#menu">menu</a></li>
+        <li><a href="#our-story">our story</a></li>
+        <li><a href="#about">about</a></li>
+    </ul>
+</nav>
+<main role="main">
+    <article id="menu">menu</article>
+    <article id="our-story">our story</article>
+    <article id="about">about</article>
+    <article id="home">home</article>
+</main>
 </body>
 
-<script src="assets/compiled/magic1.0.11.min.js"></script>
+<!--<script src="assets/compiled/magic1.0.11.min.js"></script>-->
+<script src="assets/js/magic.js"></script>
 </html>

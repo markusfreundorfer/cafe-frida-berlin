@@ -77,6 +77,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-string-replace');
     grunt.loadNpmTasks('grunt-git');
 
-    grunt.registerTask('local', ['watch']);
-    grunt.registerTask('deploy', ['clean','bumpup', 'uglify', 'sass', 'string-replace', 'gitadd']);
+    grunt.registerTask('local', ['sass','watch']);
+    grunt.registerTask('deploy', ['clean','bumpup', 'uglify', 'sass', 'string-replace']);
 };

@@ -1,0 +1,17 @@
+main {
+  > article {
+    display: none;
+
+    &:last-child{
+      display: block;
+    }
+
+    &:target {
+      display: block;
+
+      ~ article {
+        display: none;
+      }
+    }
+  }
+}
