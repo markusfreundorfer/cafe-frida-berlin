@@ -1,12 +1,14 @@
-@import "colors";
+@import "variables";
 @import "css-reset";
 @import "mixins";
 @import "keyframe";
 @import "nav";
+@import "pageswitch";
 
 body {
-  background-color: $cyan;
+  position: relative;
   font-size: 30px;
   font-weight: bold;
   font-family: "helvetica";
+  background: url("../images/cyanbg.jpg");
 }

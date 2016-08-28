@@ -4,31 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Café Frida Berlin</title>
-    <link rel="stylesheet" href="assets/compiled/styles1.0.11.css">
+    <link rel="stylesheet" href="assets/compiled/styles1.0.14.css">
 </head>
 <body>
 <input type="checkbox" id="nav">
-<label class="hamburger" for="nav">
-    <span></span>
-    <span></span>
-    <span></span>
-</label>
-<nav role="navigation">
-    <ul>
+<label for="nav">
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul id="navigation-list">
         <li><a href="#home">home</a></li>
         <li><a href="#menu">menu</a></li>
         <li><a href="#our-story">our story</a></li>
         <li><a href="#about">about</a></li>
     </ul>
-</nav>
+</label>
 <main role="main">
     <article id="menu">menu</article>
-    <article id="our-story">our story</article>
+    <article id="our-story">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </article>
     <article id="about">about</article>
-    <article id="home">home</article>
-</main>
-</body>
+    <article id="home">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+            sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 
-<!--<script src="assets/compiled/magic1.0.11.min.js"></script>-->
-<script src="assets/js/magic.js"></script>
+
+        <img class="appear" data-src="assets/images/fridalogo.jpg">
+        <noscript><img src="assets/images/fridalogo.jpg"></noscript>
+    </article>
+</main>
+
+<script src="assets/compiled/magic.min.js"></script>
+</body>
 </html>

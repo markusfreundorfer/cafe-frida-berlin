@@ -19,11 +19,7 @@ module.exports = function(grunt) {
                     replacements: [{
                         pattern: /\"[^\s]+[.]css\"/,
                         replacement: '"assets/compiled/styles<%= pkg.version %>.css"'
-                    },
-                        {
-                            pattern: /\"[^\s]+[.]js\"/,
-                            replacement: '"assets/compiled/magic<%= pkg.version %>.min.js"'
-                        }]
+                    }]
                 }
             }
         },
@@ -43,8 +39,8 @@ module.exports = function(grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'assets/js/magic.js',
-                dest: 'assets/compiled/magic<%= pkg.version %>.min.js'
+                src: 'assets/js/**/*.js',
+                dest: 'assets/compiled/magic.min.js'
             }
         },
         gitadd: {
@@ -61,6 +57,10 @@ module.exports = function(grunt) {
             css: {
                 files: ['**/*.scss'],
                 tasks: ['sass:dist']
+            },
+            js:{
+                files: ['assets/js/**/*.js'],
+                tasks: ['uglify']
             },
             www: {
                 files: ['assets/compiled/*.css']
