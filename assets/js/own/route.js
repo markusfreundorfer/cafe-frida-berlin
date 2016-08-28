@@ -28,9 +28,9 @@
         },
         // routes (i.e. views and their functionality) defined here
         'routes': {
-            'about': {
+            'cafe': {
                 'rendered': function () {
-                    console.log('this view is "about"');
+                    console.log('this view is "cafe"');
                 }
             },
             'menu': {

@@ -7,6 +7,7 @@ input#nav {
 
     .hamburger{
       span {
+        background: $black;
         &:nth-child(1) {
           top: 9px;
           @include transform(rotate(135deg));
@@ -43,7 +44,7 @@ input#nav {
     position: absolute;
     height: 4px;
     width: 100%;
-    background: $black;
+    background: white;
     opacity: 1;
     left: 0;
     @include transform(rotate(0deg));
@@ -67,18 +68,32 @@ input#nav {
   pointer-events: inherit;
   z-index: 1;
   position: absolute;
-  background-color: $beige;
+  background-color: white;
+  opacity: .9;
   @include transition(.5s ease-in-out);
   top: 0;
-  left: -170px;
-  padding: $padding*3 $padding $padding;
+  /*left: -202px;*/
+  left: -100%;
+  padding: $padding*3 0 $padding;
+  border-bottom-right-radius: 3px;
+  width: 100%;
+  @include box-sizing(border-box);
 
   li{
-    line-height: 1.2;
+    line-height: 1.6;
 
     a{
+      padding: 0 $padding;
+      display: block;
+      font-size: 30px;
+      opacity: 1;
       color: $black;
       text-decoration: none;
+
+      &:active{
+        background-color: $pink;
+        color: white;
+      }
     }
   }
 }

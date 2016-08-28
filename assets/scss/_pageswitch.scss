@@ -1,7 +1,7 @@
 main {
   > article {
     display: none;
-    padding: $padding*3 $padding $padding;
+    padding: $padding*3 0 0;
 
     &:last-child{
       display: block;
