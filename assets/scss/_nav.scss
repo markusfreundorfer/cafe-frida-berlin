@@ -1,13 +1,14 @@
 input#nav {
   display: none;
   &:checked ~ label{
+
     #navigation-list {
-      left: 0;
+     @include transform(translate3d(100%,0px,0px));
     }
 
     .hamburger{
       span {
-        background: $black;
+        background: $hamburger;
         &:nth-child(1) {
           top: 9px;
           @include transform(rotate(135deg));
@@ -31,7 +32,7 @@ input#nav {
   display: block;
   width: 30px;
   height: 22px;
-  position: absolute;
+  position: fixed;
   left: $padding;
   top: $padding;
   @include transform(rotate(0deg));
@@ -64,12 +65,12 @@ input#nav {
   }
 }
 
+
 #navigation-list {
   pointer-events: inherit;
   z-index: 1;
-  position: absolute;
+  position: fixed;
   background-color: white;
-  opacity: .9;
   @include transition(.5s ease-in-out);
   top: 0;
   /*left: -202px;*/
@@ -94,6 +95,43 @@ input#nav {
         background-color: $pink;
         color: white;
       }
+    }
+  }
+}
+
+header {
+  $height: ($padding*2)+22px;
+  position: fixed;
+  width: 100%;
+  height: $height;
+  line-height: $height;
+  text-align: center;
+  background-color: transparent;
+  @include transition(background-color .25s ease-in-out);
+
+  img {
+    opacity: 0;
+    height: 40px;
+    margin: $padding/2 auto;
+    @include transition(opacity .25s ease-in-out);
+  }
+
+  &.show {
+    background-color: white;
+
+    img {
+      opacity: 1;
+    }
+
+    ~ .hamburger {
+      span {
+        background: $hamburger;
+      }
+    }
+
+    ~ #navigation-list{
+      margin-top: 55px;
+      padding-top: 0;
     }
   }
 }

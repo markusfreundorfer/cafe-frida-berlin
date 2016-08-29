@@ -2,9 +2,13 @@
     var app = {
         'default': 'home',
         'menu': document.getElementById("nav"),
+        'headerEle': document.getElementsByTagName("header")[0],
 
         // The function to start the app
         'init': function () {
+            window.addEventListener('scroll', function() {
+                app.header();
+            });
             window.addEventListener('hashchange', function () {
                 app.routeChange();
             });
@@ -47,6 +51,15 @@
                 'rendered': function () {
                     console.log('this view is "home"');
                 }
+            }
+        },
+
+        // Shows the Frida Logo in header when scrolling down
+        'header': function () {
+            if(window.scrollY > 50){
+                app.headerEle.setAttribute("class","show");
+            }else{
+                app.headerEle.setAttribute("class","");
             }
         }
     };

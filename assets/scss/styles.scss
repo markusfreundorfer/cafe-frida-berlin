@@ -6,7 +6,6 @@
 @import "pageswitch";
 @import "pages/home";
 
-
 // GENERAL
 body {
   position: relative;
@@ -18,27 +17,27 @@ body {
   color: $text;
 }
 
-b{
+b {
   font-weight: bold;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
-.phone{
+.phone {
   text-decoration: none;
   color: $text;
 }
 
-.card{
+.card {
   width: 100%;
   background-color: white;
   margin: $padding 0;
   padding: $padding;
   @include box-sizing(border-box);
 
-  h2{
+  h2 {
     padding: $padding/4 0;
     display: inline-block;
     width: 100%;
@@ -49,7 +48,6 @@ b{
     margin-bottom: $padding;
   }
 }
-
 
 // LAZY LOAD
 

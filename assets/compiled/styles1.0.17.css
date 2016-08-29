@@ -52,9 +52,12 @@ table {
 input#nav {
   display: none; }
   input#nav:checked ~ label #navigation-list {
-    left: 0; }
+    -webkit-transform: translate3d(100%, 0px, 0px);
+    -moz-transform: translate3d(100%, 0px, 0px);
+    -o-transform: translate3d(100%, 0px, 0px);
+    transform: translate3d(100%, 0px, 0px); }
   input#nav:checked ~ label .hamburger span {
-    background: #0e100f; }
+    background: #666; }
     input#nav:checked ~ label .hamburger span:nth-child(1) {
       top: 9px;
       -webkit-transform: rotate(135deg);
@@ -75,7 +78,7 @@ input#nav {
   display: block;
   width: 30px;
   height: 22px;
-  position: absolute;
+  position: fixed;
   left: 20px;
   top: 20px;
   -webkit-transform: rotate(0deg);
@@ -114,9 +117,8 @@ input#nav {
 #navigation-list {
   pointer-events: inherit;
   z-index: 1;
-  position: absolute;
+  position: fixed;
   background-color: white;
-  opacity: .9;
   -moz-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
@@ -142,6 +144,35 @@ input#nav {
       #navigation-list li a:active {
         background-color: #fe4495;
         color: white; }
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 62px;
+  line-height: 62px;
+  text-align: center;
+  background-color: transparent;
+  -moz-transition: background-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out; }
+  header img {
+    opacity: 0;
+    height: 40px;
+    margin: 10px auto;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out; }
+  header.show {
+    background-color: white; }
+    header.show img {
+      opacity: 1; }
+    header.show ~ .hamburger span {
+      background: #666; }
+    header.show ~ #navigation-list {
+      margin-top: 55px;
+      padding-top: 0; }
 
 main > article {
   display: none;
