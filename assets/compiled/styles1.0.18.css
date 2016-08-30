@@ -155,24 +155,26 @@ header {
   -moz-transition: background-color 0.25s ease-in-out;
   -o-transition: background-color 0.25s ease-in-out;
   -webkit-transition: background-color 0.25s ease-in-out;
-  transition: background-color 0.25s ease-in-out; }
-  header img {
+  transition: background-color 0.25s ease-in-out;
+  z-index: 1; }
+  header ~ .header-logo img {
+    display: inline-block;
+    width: 100%;
+    position: fixed;
     opacity: 0;
     height: 40px;
     margin: 10px auto;
     -moz-transition: opacity 0.25s ease-in-out;
     -o-transition: opacity 0.25s ease-in-out;
     -webkit-transition: opacity 0.25s ease-in-out;
-    transition: opacity 0.25s ease-in-out; }
+    transition: opacity 0.25s ease-in-out;
+    z-index: 10; }
   header.show {
     background-color: white; }
-    header.show img {
+    header.show ~ .header-logo img {
       opacity: 1; }
     header.show ~ .hamburger span {
       background: #666; }
-    header.show ~ #navigation-list {
-      margin-top: 55px;
-      padding-top: 0; }
 
 main > article {
   display: none;

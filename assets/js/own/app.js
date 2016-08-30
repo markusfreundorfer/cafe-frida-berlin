@@ -3,15 +3,20 @@
         'default': 'home',
         'menu': document.getElementById("nav"),
         'headerEle': document.getElementsByTagName("header")[0],
+        'enableScrollEventHeader': true,
 
         // The function to start the app
         'init': function () {
-            window.addEventListener('scroll', function() {
-                app.header();
-            });
             window.addEventListener('hashchange', function () {
                 app.routeChange();
             });
+            window.addEventListener('scroll', function () {
+                if (app.enableScrollEventHeader) {
+                    app.header(false);
+                }
+            });
+
+
             // If there is no hash in the URL, change the URL to
             // include the default view's hash.
             if (!window.location.hash) {
@@ -29,6 +34,16 @@
             app.routeElem = document.getElementById(app.routeID);
             app.route.rendered();
             app.menu.checked = app.menu.checked ? !app.menu.checked : app.menu.checked;
+
+            // The Header needs to be shown on subpages.
+            // The Scroll event which hides the Header needs to be disabled.
+            if (app.routeID !== 'home') {
+                app.header(true);
+                app.enableScrollEventHeader = false;
+            } else {
+                app.enableScrollEventHeader = true;
+                app.headerEle.setAttribute("class", "");
+            }
         },
         // routes (i.e. views and their functionality) defined here
         'routes': {
@@ -55,11 +70,11 @@
         },
 
         // Shows the Frida Logo in header when scrolling down
-        'header': function () {
-            if(window.scrollY > 50){
-                app.headerEle.setAttribute("class","show");
-            }else{
-                app.headerEle.setAttribute("class","");
+        'header': function (force) {
+            if (window.scrollY > 50 || force) {
+                app.headerEle.setAttribute("class", "show");
+            } else if (!force) {
+                app.headerEle.setAttribute("class", "");
             }
         }
     };

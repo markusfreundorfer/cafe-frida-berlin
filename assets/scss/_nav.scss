@@ -108,30 +108,34 @@ header {
   text-align: center;
   background-color: transparent;
   @include transition(background-color .25s ease-in-out);
+  z-index: 1;
 
-  img {
-    opacity: 0;
-    height: 40px;
-    margin: $padding/2 auto;
-    @include transition(opacity .25s ease-in-out);
+  ~ .header-logo {
+    img{
+      display: inline-block;
+      width: 100%;
+      position: fixed;
+      opacity: 0;
+      height: 40px;
+      margin: $padding/2 auto;
+      @include transition(opacity .25s ease-in-out);
+      z-index: 10;
+    }
   }
 
   &.show {
     background-color: white;
 
-    img {
-      opacity: 1;
+    ~ .header-logo {
+      img{
+        opacity: 1;
+      }
     }
 
     ~ .hamburger {
       span {
         background: $hamburger;
       }
-    }
-
-    ~ #navigation-list{
-      margin-top: 55px;
-      padding-top: 0;
     }
   }
 }
