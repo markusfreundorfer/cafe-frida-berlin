@@ -1,20 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta name="robots" value="noindex" />
+    <meta name="robots" value="noindex"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Café Frida Berlin</title>
-    <link rel="stylesheet" href="assets/compiled/styles1.0.18.css">
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-83422675-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+    <meta name="keywords" content="cafe, frida, berlin, frida kahlo"/>
+    <link rel="stylesheet" href="assets/compiled/styles1.0.19.css">
 </head>
 <body>
 <input type="checkbox" id="nav">
@@ -22,18 +14,18 @@
     <header>&nbsp;
     </header>
     <a class="header-logo" href="#home" title="Frida Café Berlin Startseite"><img src="assets/images/frida.svg"></a>
-    <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+    <!-- <div class="hamburger">
+         <span></span>
+         <span></span>
+         <span></span>
+     </div>
 
-    <ul id="navigation-list">
-        <li><a href="#home">home</a></li>
-        <li><a href="#menu">menu</a></li>
-        <li><a href="#our-story">our story</a></li>
-        <li><a href="#cafe">café</a></li>
-    </ul>
+     <ul id="navigation-list">
+         <li><a href="#home">home</a></li>
+         <li><a href="#menu">menu</a></li>
+         <li><a href="#our-story">our story</a></li>
+         <li><a href="#cafe">café</a></li>
+     </ul>-->
 </label>
 <main role="main">
     <article id="menu">
@@ -75,30 +67,61 @@
     <article id="cafe">
         <div class="card">café</div>
     </article>
+    <article id="impressum">
+        <div class="card">
+            <p>schmu</p>
+        </div>
+    </article>
     <article id="home">
         <img class="logo" src="assets/images/logo_white.png" alt="Café Frida Berlin">
         <div class="card">
             <h2>Kreuzberg, Berlin</h2>
-            <p class="text-center">
-                <b>Café</b>
+            <ul class="text-center">
+                <li><b>Café</b></li>
+                <li>Graefestraße 75</li>
+                <li>10967 Berlin</li>
                 <br>
-                Graefestraße 75
+                <li><a href="tel:015253908948">Tel: 0152 53 90 89 48</a></li>
                 <br>
-                10967 Berlin
-                <br><br>
-                <a class="phone" href="tel:015253908948">Tel: 0152 53 90 89 48</a>
-                <br>
-                <br>
-                M-S: 9:00 - 20:00 Uhr
+                <li>DI-FR: 7:30 - 19:00 Uhr</li>
+                <li>SA-SO: 9:00 - 18:00 Uhr</li>
+                <li>MO - Geschlossen</li>
                 <br>
                 <br>
-                <a style="color: #fe4495" href="https://goo.gl/maps/iKK9ug2YCd62">Karte</a>
-
-            </p>
+                <li class="public-transport subway"><span></span><br>Schönleinstraße</li>
+                <li class="public-transport bus"><span></span><br>Graefestr.</li>
+                <br class="clearfix">
+                <br>
+                <br>
+                <br>
+                <li><a style="color: #fe4495" href="https://goo.gl/maps/iKK9ug2YCd62">Karte</a></li>
+                <br>
+            </ul>
         </div>
     </article>
 </main>
+<footer>
+    <a class="impressum" href="#impressum">Impressum</a>
+    <a class="facebook" href="//www.facebook.com/fridacafeberlin/" target="_blank"></a>
+</footer>
+
 
 <script src="assets/compiled/magic.min.js"></script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-83422675-1', 'auto');
+    ga('send', 'pageview');
+</script>
 </body>
 </html>

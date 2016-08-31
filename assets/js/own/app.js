@@ -57,6 +57,11 @@
                     console.log('this view is "menu"');
                 }
             },
+            'impressum': {
+                'rendered': function () {
+                    console.log('this view is "impressum"');
+                }
+            },
             'our-story': {
                 'rendered': function () {
                     console.log('this view is "story"');

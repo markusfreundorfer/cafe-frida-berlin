@@ -3,10 +3,11 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="28cdcede-5a79-4fec-a618-78d6955408b3" name="Cafe Frida" url="http://ftp.strato.com">
-        <fileTransfer host="ftp.strato.com" port="21" password="dfccdfd8dfc3dfcedfcbdf9bdf98df99" username="ftp_frida@wurzlsepp.de">
+        <fileTransfer host="ftp.strato.com" port="21" rootFolder="/cafe-frida">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
+          <option name="port" value="21" />
         </fileTransfer>
       </webServer>
     </option>
