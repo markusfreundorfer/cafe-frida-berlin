@@ -253,7 +253,8 @@ b {
   text-align: center; }
 
 a[href^="tel"], a[href^="mailto"] {
-  color: #fe4495; }
+  color: #fe4495;
+  cursor: pointer; }
 
 footer {
   position: relative; }
