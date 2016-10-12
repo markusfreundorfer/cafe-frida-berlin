@@ -16,7 +16,6 @@
                 }
             });
 
-
             // If there is no hash in the URL, change the URL to
             // include the default view's hash.
             if (!window.location.hash) {
@@ -34,6 +33,7 @@
             app.routeElem = document.getElementById(app.routeID);
             app.route.rendered();
             app.menu.checked = app.menu.checked ? !app.menu.checked : app.menu.checked;
+            window.scrollTo(0, 0);
 
             // The Header needs to be shown on subpages.
             // The Scroll event which hides the Header needs to be disabled.
@@ -47,11 +47,11 @@
         },
         // routes (i.e. views and their functionality) defined here
         'routes': {
-            'cafe': {
+            /*'cafe': {
                 'rendered': function () {
                     console.log('this view is "cafe"');
                 }
-            },
+            },*/
             'menu': {
                 'rendered': function () {
                     console.log('this view is "menu"');
@@ -61,12 +61,12 @@
                 'rendered': function () {
                     console.log('this view is "impressum"');
                 }
-            },
+            },/*
             'our-story': {
                 'rendered': function () {
                     console.log('this view is "story"');
                 }
-            },
+            },*/
             'home': {
                 'rendered': function () {
                     console.log('this view is "home"');
