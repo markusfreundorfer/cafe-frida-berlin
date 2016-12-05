@@ -309,6 +309,10 @@ footer {
     border-bottom: 1px solid #0e100f;
     margin-bottom: 20px; }
 
+.christmas {
+  border: 2px dashed #fe4495;
+  padding: 20px; }
+
 .responsively-lazy:not(img) {
   position: relative;
   height: 0; }
