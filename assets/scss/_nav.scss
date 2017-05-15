@@ -78,6 +78,7 @@ input#nav {
   padding: $padding*3 0 $padding;
   border-bottom-right-radius: 3px;
   width: 100%;
+  border-bottom: 1px solid $hamburger;
   @include box-sizing(border-box);
 
   li{
@@ -109,6 +110,7 @@ header {
   background-color: transparent;
   @include transition(background-color .25s ease-in-out);
   z-index: 1;
+  top: 0;
 
   @media (min-width: $bp-desktop) {
     display: none;
@@ -119,6 +121,7 @@ header {
       display: inline-block;
       width: 100%;
       position: fixed;
+      top: 0;
       opacity: 0;
       height: 40px;
       margin: $padding/2 auto;

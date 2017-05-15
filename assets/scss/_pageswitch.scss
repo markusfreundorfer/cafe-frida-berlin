@@ -1,7 +1,11 @@
 main {
   > article {
-    display: none;
-    padding: $padding*3 0 0;
+
+    &#menu{
+      display: none;
+    }
+
+    padding: 40px 0 0;
 
     &#impressum{
       padding-top: $padding*2;

@@ -33,26 +33,34 @@
             app.routeElem = document.getElementById(app.routeID);
             app.route.rendered();
             app.menu.checked = app.menu.checked ? !app.menu.checked : app.menu.checked;
-            window.scrollTo(0, 0);
+
+            var offset = app.routeElem.offsetTop;
+
+            window.scrollTo(0, offset);
 
             // The Header needs to be shown on subpages.
             // The Scroll event which hides the Header needs to be disabled.
-            if (app.routeID !== 'home') {
+            /**if (app.routeID !== 'home') {
                 app.header(true);
                 app.enableScrollEventHeader = false;
             } else {
                 app.enableScrollEventHeader = true;
                 app.headerEle.setAttribute("class", "");
-            }
+            }**/
         },
         // routes (i.e. views and their functionality) defined here
         'routes': {
-            /*'cafe': {
+            'home': {
                 'rendered': function () {
-                    console.log('this view is "cafe"');
+                    console.log('this view is "home"');
                 }
-            },*/
-            'menu': {
+            },
+            'story': {
+                'rendered': function () {
+                    console.log('this view is "story"');
+                }
+            },
+            'food': {
                 'rendered': function () {
                     console.log('this view is "menu"');
                 }
@@ -61,20 +69,10 @@
                 'rendered': function () {
                     console.log('this view is "impressum"');
                 }
-            },/*
-            'our-story': {
-                'rendered': function () {
-                    console.log('this view is "story"');
-                }
-            },*/
-            'home': {
-                'rendered': function () {
-                    console.log('this view is "home"');
-                }
             }
         },
 
-        // Shows the Frida Logo in header when scrolling down
+        // Shows header when scrolling down
         'header': function (force) {
             if (window.scrollY > 50 || force) {
                 app.headerEle.setAttribute("class", "show");

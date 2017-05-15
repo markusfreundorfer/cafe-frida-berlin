@@ -3,13 +3,16 @@
 @import "mixins";
 @import "keyframe";
 @import "nav";
-@import "pageswitch";
+
 @import "pages/home";
+@import "pages/food";
+@import "pages/open";
+@import "pages/story";
 
 // GENERAL
 body {
   position: relative;
-  background: url("../images/cyanbg.jpg");
+  background: url("../images/home.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Courier New";
@@ -35,8 +38,13 @@ a {
   }
 }
 
+#menu{
+  display: none;
+}
+
 footer {
   position: relative;
+  height: 50px;
 
   @media (min-width: $bp-desktop) {
     width: 30%;
@@ -65,7 +73,7 @@ footer {
 
   .facebook, .instagram {
     position: absolute;
-    top: $padding;
+    top: $padding/2;
     padding: 0;
     width: 30px;
     height: 30px;
@@ -76,9 +84,12 @@ footer {
 .card {
   width: 100%;
   background-color: white;
-  margin-top: $padding;
   padding: $padding;
   @include box-sizing(border-box);
+
+  @media (min-width: $bp-desktop) {
+    padding: $padding 35%;
+  }
 
   &.half {
 
