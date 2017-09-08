@@ -29,7 +29,7 @@ b {
 }
 
 a {
-  &[href^="tel"], &[href^="mailto"] {
+  &.pink {
     color: $pink;
     cursor: pointer;
   }

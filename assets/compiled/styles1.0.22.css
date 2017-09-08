@@ -254,7 +254,7 @@ b {
 .text-center {
   text-align: center; }
 
-a[href^="tel"], a[href^="mailto"] {
+a.pink {
   color: #fe4495;
   cursor: pointer; }
 
